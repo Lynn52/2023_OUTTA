@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendation Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        select, input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+            margin-bottom: 15px; /* 조정 */
+        }
+        select {
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cosmetic Recommendation system</h1>
+    <form method="POST">
+        <label for="user_id">User ID (0-100):</label>
+        <input type="number" name="user_id" min="0" max="100" required>
+        
+        <label for="product_type">Product Type:</label>
+        <select name="product_type" required>
+            <option value="토너">토너</option>
+            <option value="로션">로션</option>
+            <option value="앰플">앰플</option>
+            <option value="세럼">세럼</option>
+            <option value="크림">크림</option>
+            <option value="에센스">에센스</option>
+        </select>
+        
+        <button type="submit">Get Recommendations</button>
+    </form>
+</body>
+</html>
